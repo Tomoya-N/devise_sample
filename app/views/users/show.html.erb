@@ -1,0 +1,4 @@
+<h1>タスク一覧</h1>
+<% @user.tasks.each do |task| %>
+  <p><%= task.task_name %>:<%= task.limit %></p>
+<% end %>
