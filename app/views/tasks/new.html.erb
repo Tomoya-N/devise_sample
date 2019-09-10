@@ -1,0 +1,6 @@
+<h1>タスク情報を入力してください。</h1>
+<%= form_for @task, method: :post do |f| %>
+  <p>タスク:<%= f.text_field :task_name %></p>
+  <p>期限(例:20190910):<%= f.text_field :limit %></p>
+  <input type="submit" value="送信">
+<% end %>
