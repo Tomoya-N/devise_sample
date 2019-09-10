@@ -1,7 +1,7 @@
 <h1>タスク一覧</h1>
 <% if user_signed_in? %>
   <% @tasks.each do |task| %>
-    <p>タスク:<%= task.task_name %> 期限:<%= task.limit %> 会員No.<%= task.user.id %></p>
+    <p>タスク:<%= task.task_name %> 期限:<%= task.limit %> <%= task.user.nickname.present? ? "#{task.user.nickname}" : "会員No.#{task.user.id}" %></p>
   <% end %>
 <% else %>
   <p>ログインしてください。</p>
